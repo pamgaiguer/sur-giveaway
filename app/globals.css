@@ -431,6 +431,15 @@ main {
   cursor: pointer;
   font-size: 11px;
 }
+.draw-card .advanced > summary {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.draw-card .advanced > summary svg {
+  width: 18px;
+  height: 18px;
+}
 .advanced > summary::after {
   content: "+";
   margin-left: auto;

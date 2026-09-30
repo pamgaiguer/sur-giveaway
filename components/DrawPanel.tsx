@@ -108,7 +108,7 @@ export function DrawPanel({
         </div>
       </fieldset>
       <p className="hint">
-        {eligible.length} elegíveis · {winners + alternates} participantes
+        {eligible.length} selecionados · {winners + alternates} participantes
         distintos necessários · Aleatoriedade com Web Crypto
       </p>
       {error && (
@@ -136,21 +136,21 @@ export function DrawPanel({
           <span className="badge">
             {result.mode === "random"
               ? "SORTEIO — RESULTADO FINAL"
-              : "SORTEIO - RESULTADO FINAL - CURADORIA"}
+              : "SORTEIO - RESULTADO FINAL!!"}
           </span>
           {result.winners.map((w) => (
             <div key={w.username}>
               <p className="eyebrow">
                 {result.mode === "random"
                   ? "🏆 VENCEDOR"
-                  : "PARTICIPANTE SELECIONADO"}
+                  : "🏆 VENCEDOR(A)"}
               </p>
               <h2>@{w.username || "indisponível"}</h2>
               {w.comment.source !== "images" && (
                 <p className="hint">
                   {result.mode === "random"
                     ? "Comentário vencedor"
-                    : "Comentário selecionado"}
+                    : "Comentário vencedor"}
                 </p>
               )}
               {w.comment.source !== "images" && (
